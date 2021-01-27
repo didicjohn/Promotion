@@ -1,0 +1,8 @@
+C:\Users\didij\source\repos\Promotion\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.deps.json
+C:\Users\didij\source\repos\Promotion\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.dll
+C:\Users\didij\source\repos\Promotion\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.pdb
+C:\Users\didij\source\repos\Promotion\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfoInputs.cache
+C:\Users\didij\source\repos\Promotion\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfo.cs
+C:\Users\didij\source\repos\Promotion\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csproj.CoreCompileInputs.cache
+C:\Users\didij\source\repos\Promotion\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.dll
+C:\Users\didij\source\repos\Promotion\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.pdb
