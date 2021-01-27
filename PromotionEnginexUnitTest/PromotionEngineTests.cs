@@ -25,15 +25,26 @@ namespace PromotionEngineUnitTest
         public static IEnumerable<object[]> TestData()
         {
             var productList = new Dictionary<string, decimal>() { { "A", 50 }, { "B", 30 }, { "C", 20 }, { "D", 15 } };
-            var promotions = new List<Promotion>(){new PromotionOnSameType(){
-                 OfferOnSameItems = new List<OfferOnSameProduct>() {
+            var pro1 = new PromotionOnSameType()
+            {
+                OfferOnSameItems = new List<OfferOnSameProduct>() {
                      new OfferOnSameProduct() { ItemName = "A", Count = 3, OfferValue = 130 },
-                     new OfferOnSameProduct(){ ItemName="B",Count = 2,OfferValue =45 } }} };
-            yield return new object[] {100,
-            new Dictionary<string, int>() {{"A",1 },{"B",1},{"C",1}},
-            productList ,promotions};
-            yield return new object[] { 370, new Dictionary<string, int>() { { "A", 5 }, { "B", 5 }, { "C", 1 } }, productList, promotions };
-            // yield return new object[] {280,new Dictionary<string, int>() {{"A",3 },{"B",5},{"C",1}, { "D", 1 } }, new Dictionary<string, decimal>() { { "A", 50 }, { "B", 30 }, { "C", 20 }, { "D", 15 } } };
+                     new OfferOnSameProduct(){ ItemName="B",Count = 2,OfferValue =45 } }
+            };
+            var pro2 = new CombinationPromotion()
+            {
+                OfferOnCombinations = new List<OfferDifferentProducts>(){
+                {
+                    new OfferDifferentProducts(){
+                        Combinations = new Dictionary<string, int>(){
+                            { "C",1},{ "D", 1 } },
+                        OfferValue = 30 }
+                }}
+            };
+            var promotions = new List<Promotion>(){pro1,pro2};
+            yield return new object[] {100,new Dictionary<string, int>() {{"A",1 },{"B",1},{"C",1},{ "D", 0 }},productList ,promotions};
+            yield return new object[] { 380, new Dictionary<string, int>() { { "A", 5 }, { "B", 5 }, { "C", 1 }, { "D", 1 } }, productList, promotions };
+            yield return new object[] { 280, new Dictionary<string, int>() { { "A", 3 }, { "B", 5 }, { "C", 1 }, { "D", 1 } }, productList, promotions };
         }
     }
 }
